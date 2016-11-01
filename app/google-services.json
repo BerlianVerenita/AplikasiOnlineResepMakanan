@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "567540029232",
+    "firebase_url": "https://aplikasionlineresepmakanan.firebaseio.com",
+    "project_id": "aplikasionlineresepmakanan",
+    "storage_bucket": "aplikasionlineresepmakanan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567540029232:android:e5f28f7b4e1916ee",
+        "android_client_info": {
+          "package_name": "id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567540029232-8of8apttta2qg1iih5pkj1k0ibefa8ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRlk9qx8F8znf3WfzYeSVd9uPh9nVhQS0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
