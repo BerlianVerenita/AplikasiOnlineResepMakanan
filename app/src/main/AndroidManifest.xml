@@ -15,7 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".EmailPassword" />
+        <activity android:name=".EmailPasswordActivity" />
+        <activity android:name=".AnonymousAuthActivity" />
+        <activity android:name=".menu" />
+        <activity android:name=".tambahmenu"></activity>
     </application>
 
 </manifest>
