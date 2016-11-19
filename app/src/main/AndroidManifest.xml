@@ -16,11 +16,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".EmailPassword" />
-        <activity android:name=".EmailPasswordActivity" />
-        <activity android:name=".AnonymousAuthActivity" />
-        <activity android:name=".menu" />
-        <activity android:name=".tambahmenu"></activity>
+        <activity android:name=".TampilanAwal" />
+        <activity
+            android:name=".DaftarResep"
+            android:label="@string/title_activity_daftar_resep"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
