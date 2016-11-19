@@ -21,8 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="Daftar Resep"
-            android:textSize="45dp" />
+            android:text="Daftar Resep Makanan"
+            android:textSize="30dp" />
 
         <Spinner
             android:id="@+id/spinner"
