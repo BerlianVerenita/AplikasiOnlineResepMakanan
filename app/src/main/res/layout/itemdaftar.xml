@@ -22,7 +22,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:text="Daftar Resep"
-            android:textSize="40dp" />
+            android:textSize="45dp" />
 
         <Spinner
             android:id="@+id/spinner"
