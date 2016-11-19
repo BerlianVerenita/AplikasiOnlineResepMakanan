@@ -59,7 +59,7 @@
             tools:text="Judul"
             android:layout_marginleft="16dp"
             android:layout_alignBottom="@+id/imageView"
-            android:textAppearance="style/TextAppearance.AppCompat.Title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textColor="android:color/white"/>
 
 
