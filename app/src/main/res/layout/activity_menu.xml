@@ -17,6 +17,8 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="191dp"
+        android:layout_collapseMode="parallax"
+        android:scaleType="centerCrop"
         app:srcCompat="@drawable/soto" />
 
     <TextView
