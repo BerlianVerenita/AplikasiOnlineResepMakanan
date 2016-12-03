@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +9,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan.DaftarResep;
 import id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan.R;
 import id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan.model.Resep;
 
@@ -18,9 +18,11 @@ import id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan.m
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
     ArrayList<Resep> resepList;
+    Context c;
 
 
-    public CustomAdapter(DaftarResep daftarResep, ArrayList<Resep> resepList) {
+    public CustomAdapter(Context c, ArrayList<Resep> resepList) {
+        this.c = c;
         this.resepList = resepList;
     }
 
@@ -48,8 +50,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        if (resepList != null)
-            return resepList.size();
         return 0;
     }
 

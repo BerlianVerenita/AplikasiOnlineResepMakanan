@@ -35,6 +35,8 @@ public class FirebaseHelper {
         this.DB_URL = DB_URL;
         this.rv = rv;
 
+        Firebase.setAndroidContext(c);
+
         fire = new Firebase(DB_URL);
     }
 
@@ -43,13 +45,11 @@ public class FirebaseHelper {
         r.setJudul(judul);
         r.setDeskripsi(desc);
         r.setStep(step);
-
         fire.child("Resep").push().setValue(r);
     }
 
     public void refreshData() {
         fire.addChildEventListener(new ChildEventListener() {
-
 
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
