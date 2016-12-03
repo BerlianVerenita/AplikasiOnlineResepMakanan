@@ -7,6 +7,8 @@ package id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan.
 public class Resep {
     private String judul;
     private String deskripsi;
+    private String step;
+    // private String deskripsi;
     //private Drawable foto;
 
     public Resep() {
@@ -29,5 +31,12 @@ public class Resep {
         this.deskripsi = deskripsi;
     }
 
+    public String getStep() {
+        return step;
+    }
+
+    public void setStep(String deskripsi) {
+        this.step = step;
+    }
 
 }

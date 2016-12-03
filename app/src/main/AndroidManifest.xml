@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan">
 
+    <user-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/logoresep"
@@ -16,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".menu"
+            android:name=".tambahmenu"
             android:label="@string/title_activity_daftar_resep"
             android:theme="@style/AppTheme"></activity>
     </application>

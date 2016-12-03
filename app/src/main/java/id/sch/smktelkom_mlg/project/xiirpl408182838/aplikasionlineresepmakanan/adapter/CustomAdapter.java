@@ -1,15 +1,14 @@
 package id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan.adapter;
 
-import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan.DaftarResep;
 import id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan.R;
 import id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan.model.Resep;
 
@@ -17,51 +16,54 @@ import id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan.m
  * Created by Keni Amalia on 19-Nov-16.
  */
 
-public class CustomAdapter extends BaseAdapter {
-    Context c;
-    ArrayList<Resep> resep;
+public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+    ArrayList<Resep> resepList;
 
-    public CustomAdapter(Context c, ArrayList<Resep> resep) {
-        this.c = c;
-        this.resep = resep;
+
+    public CustomAdapter(DaftarResep daftarResep, ArrayList<Resep> resepList) {
+        this.resepList = resepList;
     }
 
     @Override
-    public int getCount() {
-        return resep.size();
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemdaftar, parent, false);
+        ViewHolder vh = new ViewHolder(v);
+        return vh;
     }
 
     @Override
-    public Object getItem(int position) {
-        return resep.get(position);
+    public void onBindViewHolder(ViewHolder holder, int position) {
+
+        Resep resep = resepList.get(position);
+        holder.nameTxt.setText(resep.getJudul());
+        holder.proptxt.setText(resep.getDeskripsi());
     }
 
     @Override
     public long getItemId(int position) {
+
         return position;
+
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        if (convertView == null) {
-            convertView = LayoutInflater.from(c).inflate(R.layout.activity_daftar_resep, parent, false);
+    public int getItemCount() {
+        if (resepList != null)
+            return resepList.size();
+        return 0;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        TextView nameTxt;
+        TextView proptxt;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            TextView nameTxt = (TextView) itemView.findViewById(R.id.textViewJudul);
+            TextView propTxt = (TextView) itemView.findViewById(R.id.textViewLihat);
+            // ImageView imgRsp = (ImageView) convertView.findViewById(R.id.imageView);
+
         }
-
-        TextView nameTxt = (TextView) convertView.findViewById(R.id.textViewJudul);
-        TextView propTxt = (TextView) convertView.findViewById(R.id.textViewLihat);
-        // ImageView imgRsp = (ImageView) convertView.findViewById(R.id.imageView);
-
-        final Resep s = (Resep) this.getItem(position);
-
-        nameTxt.setText(s.getJudul());
-        propTxt.setText(s.getDeskripsi());
-
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(c, s.getJudul(), Toast.LENGTH_SHORT).show();
-            }
-        });
-        return convertView;
     }
 }
