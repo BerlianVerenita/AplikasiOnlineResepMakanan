@@ -67,6 +67,15 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/ic_camera_black_24dp" />
 
+        <ImageView
+            android:id="@+id/imageViewHasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:minHeight="160dp"
+            android:scaleType="fitCenter" />
+
         <Button
             android:id="@+id/buttonSimpan"
             android:layout_width="match_parent"

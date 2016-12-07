@@ -16,6 +16,7 @@ import id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan.h
 
 public class DaftarResep extends AppCompatActivity {
 
+    public static final int REQUEST_CODE_ADD = 88;
     final static String DB_URL = "https://aplikasionlineresepmakanan.firebaseio.com/";
     FirebaseHelper helper;
     CustomAdapter adapter;
@@ -41,10 +42,22 @@ public class DaftarResep extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(DaftarResep.this, tambahmenu.class));
+                goAdd();
 
             }
         });
+
     }
 
+    private void goAdd() {
+        startActivityForResult(new Intent(this, tambahmenu.class), REQUEST_CODE_ADD);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_ADD && resultCode == RESULT_OK) {
+
+        }
+    }
 }

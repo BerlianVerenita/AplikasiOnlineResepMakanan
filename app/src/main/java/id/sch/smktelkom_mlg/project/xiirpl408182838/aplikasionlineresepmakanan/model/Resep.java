@@ -9,7 +9,7 @@ public class Resep {
     private String deskripsi;
     private String step;
     // private String deskripsi;
-    //private Drawable foto;
+    private String foto;
 
     public Resep() {
 
@@ -38,5 +38,14 @@ public class Resep {
     public void setStep(String step) {
         this.step = step;
     }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
 
 }
