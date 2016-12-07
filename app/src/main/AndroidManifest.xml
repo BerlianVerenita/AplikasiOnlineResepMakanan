@@ -3,6 +3,7 @@
     package="id.sch.smktelkom_mlg.project.xiirpl408182838.aplikasionlineresepmakanan">
 
     <user-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logoresep"
@@ -10,16 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DaftarResep">
+        </activity>
+        <activity
+            android:name=".tambahmenu"
+            android:label="@string/title_activity_daftar_resep"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".AppIntro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".tambahmenu"
-            android:label="@string/title_activity_daftar_resep"
-            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
